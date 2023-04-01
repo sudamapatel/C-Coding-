@@ -1,0 +1,47 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+   int i,j,n,k;
+   cin>>n;
+   int a[n];
+   for(i=0;i<n;i++){
+       cin>>a[i];
+   }
+   for(i=0;i<n;i++){
+       for(j=i+1;j<n;j++){
+           if(a[i]==a[j])
+           if(j<n){
+               n-=1;
+               for(k=j;k<n;k++){
+                   a[k]=a[k+1];
+               }
+           }
+       }
+   }/* after removing duplicate value array element for(i=0;i<n;i++){
+       cout<<a[i]<<" ";
+   }*/
+   int even_mul=1,odd_mul=1;
+   for(i=0;i<n;i++){
+       if(a[i]%2==0)
+        even_mul=even_mul*a[i];
+   }
+   for(i=0;i<n;i++){
+       if(a[i]%2!=0)
+        odd_mul=odd_mul*a[i];
+   }
+   int diff=odd_mul-even_mul;
+   if(diff<0){
+       diff=diff*(-1);
+   cout<<"the diff of even and odd product="<<diff;
+   }
+   else
+   cout<<"the diff of even and odd product="<<diff;
+    return 0;
+}
+/* input= 7
+ 6 3 4 6 1 3 2
+output=45
+explanation=after removing duplicate array element 6 3 4 1 2
+product of even=48 product of odd=3
+diff=48-3=45*/

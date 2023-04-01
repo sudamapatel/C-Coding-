@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int count1=0,count2=0,count3=0;
+  char s[10000];
+  char r[10000];
+  fgets(s,10000,stdin);
+  fgets(r,10000,stdin);
+  for(int i=0;s[i]!='\0'&&r[i]!='\0';i++){
+      if(s[i]!=r[i]){
+          count1++;
+      }if(s[i]=='0'){
+          count2++;
+      }if(r[i]=='0'){
+          count3++;
+      }
+  }cout<<count1;
+  if(count2!=count3){
+      cout<<"\n1";
+  }else{
+      cout<<"\n0";
+  }
+  
+    return 0;
+    
+}/* input=10101010
+	  11101110
+   output=2
+          1 
+first output count how many diffrent index of 0 & 1
+second output if number of 0 in str1 is same number of 0 in str2 so output 0 else 1*/

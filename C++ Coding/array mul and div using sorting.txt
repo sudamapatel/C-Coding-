@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void swap(int *p,int *q){
+   *p=*p+*q;
+   *q=*p-*q;
+   *p=*p-*q;
+}
+void bsort (int *p,int n){
+    int i,j;
+    for(i=0;i<n-1;i++){
+        for(j=0;j<n-i-1;j++){
+            if(*(p+j)>*(p+j+1))
+            swap((p+j),(p+j+1));
+        }
+    }
+}int main(){
+    int n,i,mul,div;
+    cout<<"enter array size and element";
+    cin>>n;
+    int arr[n];
+    for(i=0;i<n;i++){
+        cin>>arr[i];
+    }bsort(arr,n);
+    mul=arr[n-2]*arr[0];
+    div=arr[n-2]/arr[0];
+    int result=mul+div;
+    cout<<result;
+    return 0;
+}
+/*input array size=6
+     array element=12 3 4 8 1 3
+       output= 16
+explanation-: second largest number and smallest number ke sath multiplication and dvision and the add
+second largest=8 and smallest=1
+mul=8*1=8,div=8/1=8
+add(result)=8+8=16 */

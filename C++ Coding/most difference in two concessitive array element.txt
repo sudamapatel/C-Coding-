@@ -1,0 +1,28 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int n,i,diff,assign=0;
+cout<<"enter a array size and element";
+cin>>n;
+int a[n];
+for(i=0;i<n;i++){
+    cin>>a[i];
+}
+for(i=0;i<n-1;i++){
+    if(a[i]>a[i+1]){
+        diff=a[i]-a[i+1];
+    }else{
+      diff=a[i+1]-a[i];  
+    } if(assign<diff){
+        assign=diff;
+    }
+}cout<<"most difference "<<assign;
+    return 0;
+}/*most difference in given array element 
+input=enter a array size and element 6
+1 4 8 19 23 999
+output=most difference 976
+input2=enter a array size and element6
+10 -3 6 3 11 5
+output=most difference 13*/

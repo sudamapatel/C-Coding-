@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+   int n,i,j,count=0,maxcount=0,index=-1;
+   cin>>n;
+   int a[n];
+   for(i=0;i<n;i++){
+       cin>>a[i];
+   }for(i=0;i<n;i++){
+       count=0;
+       for(j=0;j<n;j++){
+           if(a[i]==a[j]){
+               count++;
+           }
+       }if(count>maxcount){
+           maxcount=count;
+           index=i;
+       }
+   }if(maxcount>n/2){
+       cout<<"mijority Element is "<<a[index];
+   }else{
+       cout<<"no mijority element found";
+   }
+    return 0;
+}/*input=8
+        5 5 3 4 5 5 2 5
+output=mijority Element is 5
+5>10/2so 5 is mijority element*/

@@ -1,0 +1,13 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+  char n;
+   cin>>n;
+   if(n<=90 &&n>64){
+       cout<<"you entered uppercase "<<n;
+   }if(n<=122&&n>96){
+       cout<<"you entered lowercase "<<n;
+   }
+    return 0;
+}

@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n,i,sum;
+cout<<"enter a array size and element :";
+cin>>n;
+int a[n];
+for(i=0;i<n;i++){
+    cin>>a[i];
+}
+for(i=0;i<n-1;i++){
+  sum=a[n-1]+a[n-2-i];
+  cout<<sum<<" ";
+  if(a[i]==a[n-2]){
+     i=-1;
+     n--;
+  }
+}
+    return 0;
+}
+
+
+
+/*sum of reverce 
+input= enter a array size and element :4
+10 20 30 40 
+output=70 60 50 50 40 30 *
+#include<iostream>
+using namespace std;
+
+int main()
+{
+ int i, j, n, temp=0;
+ int arr[n];
+ cout<<"enter the number\n";
+ cin>>n;
+ for(i=0;i<n;i++)
+  {cin>>arr[i];
+  }
+  for(i=n-1;i>=0;i--)
+{
+for(j=i-1;j>=0;j--)
+{temp=arr[i]+arr[j];
+cout<<temp<<"\n";
+}
+
+}
+    return 0;
+}/

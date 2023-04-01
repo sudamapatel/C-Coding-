@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int n,i,count=0;
+   cin>>n;
+   int arr[n];
+   for(i=0;i<n;i++){
+   cin>>arr[i];
+   }for(i=0;i<n;i++){
+       if (arr[i]%2==0){
+       count++;
+   }
+   }
+   cout<<count;
+    return 0;
+}/*input 4
+         34 3 75 45
+         output =1
+  input 8
+        35 7 42 232 8 453 2 78
+        output =5
+count how many number of even number in the given Array*/

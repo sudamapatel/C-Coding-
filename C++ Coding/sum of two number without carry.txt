@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main() {
+int num1,num2,sum=0,add=0,r1,r2,m=1;
+cout<<"enter the number\n";
+cin>>num1>>num2;
+while(num1>0 || num2>0){
+    r1=num1%10;
+    r2=num2%10;
+    sum=r1+r2;
+    sum=sum%10;
+    add=sum*m+add;
+    m*=10;
+/*
+if(num1<10&&num2<10){
+      if(num1+num2>10){
+          add=m+add;
+      }
+if we want last digit sum with carry eg
+648 773
+addition of two number : 1311
+*/
+    num1/=10;
+    num2/=10;
+}
+cout<<"addition of two number : "<<add;
+return 0;
+}/*sum of two number without carry
+input=655 875
+output=addition of two number : 420*/

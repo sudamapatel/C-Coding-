@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int n,i,j,duplicate=0,high_duplicate=0;
+   cout<<"enter array size and element";
+   cin>>n;
+   int a[n];
+   for(i=0;i<n;i++){
+       cin>>a[i];
+    }
+   for(i=0;i<n;i++){
+       duplicate=0;
+       for(j=i;j<n;j++){
+           if(a[i]==a[j]){
+               duplicate++;
+            }
+        }
+       if(high_duplicate<duplicate){
+           high_duplicate=duplicate;
+        }
+    }
+   cout<<"higher duplicate number ="<<high_duplicate;
+    return 0;
+/* input 19
+5 788 6 77 0 9 77 8 69 77 788 9 0 0 0 88 69 69 89 
+   output=4
+  explanation-: print higher duplicate number
